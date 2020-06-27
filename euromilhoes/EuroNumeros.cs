@@ -27,17 +27,17 @@ namespace euromilhoes
 
         public int[] lerChave()
         {
-            Console.WriteLine("Digite o 1º valor:");
+            Console.Write("Digite o 1º valor: ");
             this.chave[0] = lerNum1aN(50);
             for (int i = 1; i<5; i++)
             {
-                Console.WriteLine("Digite o " + (i+1) + "º valor:" );
+                Console.Write("Digite o " + (i+1) + "º valor: " );
                 this.chave[i] = lerNum1aN(50);
                 for (int j = 0; j < i; j++)
                 {
                     while(this.chave[i] == this.chave[j])
                     {
-                        Console.WriteLine("Número repitido, digite outro valor para a " + (i+1) + "º: ");
+                        Console.Write("Número repitido, digite outro valor para a " + (i+1) + "º: ");
                         this.chave[i] = lerNum1aN(50);
                     }
                 }
@@ -55,13 +55,13 @@ namespace euromilhoes
         
         public int[] lerEstrelas()
         {
-            Console.WriteLine("Digite o valor da 1º estrela:");
+            Console.Write("Digite o valor da 1º estrela: ");
             this.estrelas[0] = lerNum1aN(12);
-            Console.WriteLine("Digite o valor da 2º estrela:");
+            Console.Write("Digite o valor da 2º estrela: ");
             this.estrelas[1] = lerNum1aN(12);
             while (this.estrelas[1] == this.estrelas[0])
             {
-                Console.WriteLine("Número repitido, digite outro valor para a 2º estrela: ");
+                Console.Write("Número repitido, digite outro valor para a 2º estrela: ");
                 this.estrelas[1] = lerNum1aN(12);
             } 
             Array.Sort(this.estrelas);
@@ -81,12 +81,12 @@ namespace euromilhoes
             this.chave[0] = rnd.Next(1,51);
             for (int i = 1; i < 5; i++)
             {
-                this.chave[i] = rnd.Next(1, 51);
+                this.chave[i] = rnd.Next(1,51);
                 for (int j = 0; j < i; j++)
                 {
                     while (this.chave[i] == this.chave[j])
                     {
-                        this.chave[i] = this.chave[0] = rnd.Next(1, 51);
+                        this.chave[i] = rnd.Next(1,51);
                     }
                 }
             }
@@ -120,7 +120,7 @@ namespace euromilhoes
                 {
                     n = int.Parse(Console.ReadLine());
                     if(n > vMax || n <= 0)
-                        Console.WriteLine("O número deve ser entre 1 e " + vMax + ": ");
+                        Console.Write("O número deve ser entre 1 e " + vMax + ": ");
                     flag = true;
                 }
                 catch

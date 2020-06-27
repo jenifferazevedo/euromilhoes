@@ -23,6 +23,7 @@ namespace euromilhoes
             jogoAleatorio.gerarChaveAleatoria();
             jogoAleatorio.gerarEstrelasAleatoria();
             Console.WriteLine("\n\nPreparado para ver o resultado?!");
+            System.Threading.Thread.Sleep(3000);
             Console.Write("Chaves: ");
             int[] acertosChave = comparar(jogoJogador.getChave(), jogoAleatorio.getChave(), "chave");
             Console.Write("Estrelas: ");
